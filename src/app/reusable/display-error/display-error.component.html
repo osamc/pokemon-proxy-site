@@ -1,0 +1,5 @@
+<mat-error *ngFor="let toDisplay of displayableErrors">
+    <ng-container *ngIf="errors && errors[toDisplay.errorName]">
+        <ng-content *ngTemplateOutlet="toDisplay.template"></ng-content>
+    </ng-container>
+</mat-error>

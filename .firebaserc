@@ -1,0 +1,14 @@
+{
+  "targets": {
+    "sam-proxy-4223e": {
+      "hosting": {
+        "sam-proxy": [
+          "sam-proxy-4223e"
+        ]
+      }
+    }
+  },
+  "projects": {
+    "default": "sam-proxy-4223e"
+  }
+}

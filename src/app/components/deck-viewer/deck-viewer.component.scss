@@ -1,0 +1,9 @@
+.deck {
+    margin: auto;
+    display: flex;
+    flex-wrap: wrap;
+    overflow-y: auto;
+    card-display {
+        margin: 0.5rem;
+    }
+}

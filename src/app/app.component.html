@@ -1,0 +1,47 @@
+
+
+<mat-drawer-container class="drawer-container" autosize>
+
+  <mat-drawer #drawer class="sideNav" mode="side">
+    YOOO
+  </mat-drawer>
+
+
+  <mat-toolbar color="primary">
+
+    <button type="button" mat-button (click)="drawer.toggle()" *ngIf="authService.currentUser | async as user; else empty">
+      <mat-icon>menu</mat-icon>
+    </button>
+
+    <ng-template #empty></ng-template>
+  
+    <div></div>
+
+    <ng-container *ngIf="authService.currentUser | async as user; else loginButton">
+      <button mat-button [matMenuTriggerFor]="userMenu"> 
+        <mat-icon>account_circle</mat-icon>
+        {{user.displayName}}
+        <mat-icon>expand_more</mat-icon>
+      </button>
+  
+    </ng-container>
+  
+    <ng-template #loginButton>
+      <button mat-button routerLink="login">
+        <mat-icon>login</mat-icon>
+        Login
+      </button>
+    </ng-template>
+  
+  
+  </mat-toolbar>
+  
+  <div class="content">
+    <router-outlet></router-outlet>
+  </div>
+  
+  <mat-menu #userMenu="matMenu">
+    <buttn mat-menu-item (click)="logout()">Logout</buttn>
+  </mat-menu>
+
+</mat-drawer-container>

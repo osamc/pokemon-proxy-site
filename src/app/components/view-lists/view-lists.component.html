@@ -1,0 +1,18 @@
+
+    <div class="lists">
+        <mat-card class="example-card" *ngFor="let deck of decks">
+
+            <mat-card-title-group>
+                <mat-card-title>{{deck.name}}</mat-card-title>
+            </mat-card-title-group>
+
+            <mat-card-content>
+                {{deck.desc}}
+            </mat-card-content>
+
+            <mat-card-content *ngIf="deck.created?.seconds">
+                created at: {{(deck.created?.seconds ?? 0) * 1000 | date: 'long'}}
+            </mat-card-content>
+
+        </mat-card>
+    </div>

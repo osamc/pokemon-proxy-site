@@ -1,0 +1,19 @@
+
+.set-preview {
+    margin: auto;
+    display: flex;
+    flex-wrap: wrap;
+    overflow-y: auto;
+    card-display {
+        margin: 0.5rem;
+    }
+}
+
+.loading {
+    opacity: 0;
+    position: absolute;
+    top: 0;
+    left: 0;
+    pointer-events: none;
+    cursor: none;
+}

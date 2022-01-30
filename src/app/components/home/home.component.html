@@ -1,0 +1,15 @@
+
+
+<div *ngIf="authService.currentUser | async as user">
+
+    <h1>Your lists:</h1>
+
+    <app-view-lists [decks]="usersLists"></app-view-lists>
+
+
+</div>
+
+<h1>Public Lists</h1>
+ 
+
+<app-view-lists [decks]="publicLists"></app-view-lists>

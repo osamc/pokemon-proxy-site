@@ -1,0 +1,30 @@
+<div class="cardImage">
+
+
+    <div [matBadge]="count" color="primary" matBadgeOverlap="true" class="margin-top" matBadgeSize="large"
+    [matBadgeHidden]="count == 0 || !builderMode"></div>
+
+    <img [src]="card?.images?.small" (load)="onImageLoad()"/>
+
+    <div class="button-overlay">
+        <button mat-mini-fab color="primary" aria-label="Example icon button with a delete icon" (click)="addCard()"
+            *ngIf="builderMode">
+            <mat-icon>add</mat-icon>
+        </button>
+        <br>
+        <button mat-mini-fab color="primary" aria-label="Example icon button with a delete icon" (click)="removeCard()"
+            *ngIf="builderMode">
+            <mat-icon>remove</mat-icon>
+        </button>
+    </div>
+
+    <div class="center">
+        <div class="screenshotCount counter" *ngIf="screenshotMode">
+
+            {{count}}
+
+        </div>
+    </div>
+
+
+</div>

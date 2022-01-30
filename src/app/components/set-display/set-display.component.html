@@ -1,0 +1,9 @@
+<div class="center margin-top" *ngIf="loading">
+    <mat-spinner></mat-spinner>
+</div>
+
+
+<div class="set-preview center" [ngClass]="loading ? 'loading' : ''">
+    <card-display *ngFor="let card of cards" [card]="card" (imageLoaded)="onImageLoad(card)"></card-display>
+</div>
+

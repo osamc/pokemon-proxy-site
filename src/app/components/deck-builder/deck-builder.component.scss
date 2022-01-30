@@ -1,0 +1,18 @@
+.search-container {
+
+    max-width: 100%;
+    margin: auto;
+
+    background: rgb(238, 238, 238);
+    border-radius: 16px;
+
+    button {
+        margin-left: 1rem;
+    }
+
+}
+
+.search-container mat-form-field {
+    margin-left: 1rem;
+    margin-top: 1rem;
+}
